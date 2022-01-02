@@ -78,8 +78,8 @@ __- ENTRENAMIENTO VGG16__
 ![grafica red VGG16](https://user-images.githubusercontent.com/91427107/147879048-9519e5c5-f175-4744-9b97-8773d5cb5ae7.png)
 
 Tal y como podemos observar la red neuronal desarrollada va tomando mejores resultados a medida que avanza el entrenamiento.
-Adicionalmente se han comparado los resultados obtenidos con la red VGG16 incluida en keras, dicha red ya esta preetrenada y obtiene unos resultados excelentes.
+Adicionalmente se han comparado los resultados obtenidos con la red VGG16 incluida en keras, dicha red ya esta preetrenada y obtiene unos resultados excelentes por lo que es ideal para comprobar si los resultados obtenidos coinciden con lo esperado.
 
+# Conclusion:
 
-
-
+La red VGG16 ha logrado obtener una tasa de acierto que oscila entre el __92%-95%__ con un solo entrenamiento, mientras que la red desarrollada se matiene en una tasa del __90%-93%__ tras múltiples entrenamientos. Se puede concluir que los resultados esperados son satisfactorios debido a que se han realizado múltiples pruebas con imágenes no incluidas en el dataset y se obtienen resultados similares. Por último, junto al comprimido con los dataset se ha incluido una carpeta llamada __test__ con un conjunto de imágenes para verificar el correcto funcionamiento de ambas redes.

@@ -10,7 +10,7 @@
 ![Entrenamiento 3](https://user-images.githubusercontent.com/91427107/147878955-0369d80e-965f-4597-bb54-e57690b0be6d.png)
 ![grafica red desarrollada 3](https://user-images.githubusercontent.com/91427107/147878956-c0e04a68-1bf5-451a-b8cf-999533b8bb8d.png)
 
-[Entrenamiento VGG16](https://user-images.githubusercontent.com/91427107/147878953-05d22e79-6df4-420e-94c8-2c892ab3ff78.png)
+![Entrenamiento VGG16](https://user-images.githubusercontent.com/91427107/147878953-05d22e79-6df4-420e-94c8-2c892ab3ff78.png)
 ![grafica red VGG16](https://user-images.githubusercontent.com/91427107/147879048-9519e5c5-f175-4744-9b97-8773d5cb5ae7.png)
 
 

@@ -1,6 +1,6 @@
 # LogoClassifier
 
-Se ha propuesto el desarrollo de una red que catalogue logos y e indique que tipo de logo es (compras, transportes, personajes animados...). Para ello, se va a utilizar un dataset contenido en nuestra cuenta de Google Drive.
+Se ha propuesto el desarrollo de una red que catalogue logos e indique que tipo de logo es (compras, transportes, personajes animados...). Para ello, se va a utilizar un dataset contenido en nuestra cuenta de Google Drive.
 
 
 # **Configuración de modelo desarrollado:**

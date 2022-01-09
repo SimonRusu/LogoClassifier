@@ -48,12 +48,27 @@ model.add(Dense(15, activation='softmax'))
 model.compile(loss=tf.keras.losses.categorical_crossentropy,
               optimizer=tf.keras.optimizers.Adam(1e-3),
               metrics=['accuracy'])
+              
+# Tabla de eficiencia: 
+
+| Número de capas Neuronales  | Número de neuronas por capa | Función de activación |       Dropout      | Tasa de acierto |
+| --------------------------  |  -------------------------  |  -------------------  | ------------------ | --------------- |
+|             7               |     8-8-32-64-128-32-15     | relu+sigmoid+softmax  | 0.25-0.5-0.5-0.25  |      0.93%      |
+|             7               |     8-16-32-64-128-32-15    |      relu+softmax     | 0.25-0.5-0.25      |      0.89%      |
+|             7               |     8-16-16-32-64-128-15    |      relu+softmax     | 0.25-0.5-0.25      |      0.89%      |
+|             6               |       8-32-32-64-64-15      |      relu+softmax     | 0.25-0.5-0.25      |      0.88%      |
+|             6               |       8-8-16-16-32-15       |      relu+softmax     | 0.25-0.5-0.25      |      0.88%      |
+|             7               |     8-16-16-32-64-128-15    | relu+sigmoid+softmax  | 0.25-0.5-0.25      |      0.88%      |
+|             7               |     8-8-32-64-128-32-15     |      relu+softmax     | 0.25-0.5-0.5-0.25  |      0.87%      |
+|             7               |     8-16-32-64-128-32-15    | relu+sigmoid+softmax  |   0.25-0.25        |      0.86%      |
+|             7               |     8-16-32-64-128-32-15    | relu+sigmoid+softmax  |   0.25-0.25        |      0.85%      |
+
 
 # Razonamiento:
 Tras las numerosas pruebas realizadas con el modelo de la red neuronal se ha concluido lo siguiente:
 * Es preferible que las primeras capas del modelo posean pocas neuronas para ir expandiendo las capas posteriores y finalmente converger en un menor número de neuronas.
 * Si bien el modelo de activación relu ocasiona que la red aprenda de manera mas fluida y rápida se ha decidido utilizar el modelo de activación sigmoide en la penultima capa. Esto es debido a una mejor tasa de acierto cuando se utilizan imagenes con variantes singificativas respecto a las utilizadas en el entrenamiento.
-* La importancia de la adicion de Dropouts en las capas finales del aprendizaje (a mayor número de neuronas mayor dropout y viceversa). Un problema común era la obtención de una tasa de acierto muy elevada (entorno al 97%) pero dichos resultados de poco servian ya que la red neuronal no solia acertar cuando se le aportaban nuevas imagenes no incluidas en el dataset de entrenamiento. Lo que se ha conseguido con las capas de dropout es reducir el sobreajuste y ajustar la tasa de acierto a valores mas proximos a los esperados, además, se obtiene una red mucho mas robusta frente a nuevas imagenes no incluidas en el dataset de entrenamiento.
+* La importancia de la adicion de Dropouts en las capas finales del aprendizaje (a mayor número de neuronas mayor dropout y viceversa). Un problema común era la obtención de una tasa de acierto más elevada de lo normal pero dichos resultados de poco servian ya que la red neuronal no solia acertar cuando se le aportaban nuevas imagenes no incluidas en el dataset de entrenamiento. Lo que se ha conseguido con las capas de dropout es reducir el sobreajuste y ajustar la tasa de acierto a valores mas proximos a los esperados, además, se obtiene una red mucho mas robusta frente a nuevas imagenes no incluidas en el dataset de entrenamiento.
 
 Se han realizado 3 entrenamientos a la red desarrollada y 1 entrenamiento a la red VGG16.
 
